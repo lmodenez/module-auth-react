@@ -73,7 +73,7 @@ export function ForgotPassword() {
               <Button
                 variant="contained"
                 className={classes.button}
-                style={{ backgroundColor: '#64991e' }}
+                style={{ backgroundColor: '#0047B3' }}
                 color="primary"
                 type="submit"
                 disabled={false}
@@ -83,7 +83,7 @@ export function ForgotPassword() {
               <Button
                 variant="contained"
                 className={classes.button}
-                style={{ backgroundColor: '#2E76CF', width: '45%' }}
+                style={{ backgroundColor: '#c84118', width: '45%' }}
                 color="primary"
                 type="button"
                 onClick={() => history.push('/')}

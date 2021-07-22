@@ -12,14 +12,14 @@ export const useStyles = makeStyles((theme) => ({
 
   content: {
     backgroundColor: '#FFFFFF',
-    color: '#1C2133',
-    width: '700px',
-    height: '800px',
+    width: '600px',
+    height: '700px',
     borderRadius: '20px ',
+    justifyContent: 'space-between',
 
     [theme.breakpoints.down('md')]: {
-      width: '600px',
-      height: '600px',
+      width: '500px',
+      height: '500px',
     },
     [theme.breakpoints.down('xs')]: {
       width: '95%',
@@ -36,9 +36,16 @@ export const useStyles = makeStyles((theme) => ({
 
   text: {
     fontWeight: 'bold',
-    color: '#1C2133',
+    color: '#262A30',
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '3rem',
+    marginTop: '7rem',
+
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '1rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '1rem',
+    },
   },
 }));

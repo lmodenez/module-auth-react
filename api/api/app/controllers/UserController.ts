@@ -14,7 +14,6 @@ class UserController {
       });
 
       if (findUser) return response.sendStatus(409);
-      console.log(user);
 
       const userCreate = await userRepository.create(user);
       await userRepository.save(userCreate);

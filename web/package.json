@@ -1,5 +1,5 @@
 {
-  "name": "portal-web",
+  "name": "module-auth-react",
   "version": "0.1.0",
   "private": true,
   "scripts": {

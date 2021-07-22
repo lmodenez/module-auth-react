@@ -289,7 +289,7 @@ export function Form() {
       <Button
         variant="contained"
         className={classes.button}
-        style={{ backgroundColor: '#64991e' }}
+        style={{ backgroundColor: '#0047B3' }}
         type="submit"
       >
         Cadastrar
@@ -298,7 +298,7 @@ export function Form() {
         variant="contained"
         className={classes.button}
         style={{
-          backgroundColor: '#2E76CF',
+          backgroundColor: '#c84118',
           width: '60%',
           marginBottom: '1rem',
         }}

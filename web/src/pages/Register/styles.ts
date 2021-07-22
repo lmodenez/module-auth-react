@@ -27,17 +27,19 @@ export const useStyles = makeStyles((theme) => ({
       height: 'auto',
     },
   },
-  boxImage: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    marginTop: '3rem',
-  },
+
   text: {
     fontWeight: 'bold',
-    color: '#1C2133',
+    color: '#262A30',
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '1rem',
+    marginTop: '8rem',
+
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '1rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '1rem',
+    },
   },
 }));

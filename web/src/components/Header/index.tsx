@@ -7,16 +7,11 @@ import { Avatar, Badge } from '@material-ui/core';
 
 import { useStyles } from './styles';
 
-import { logoStarplastBranco } from '../../utils/ImagesImport';
-
 function Header() {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
-      <div>
-        <img src={logoStarplastBranco} alt="Logo Starplast" />
-      </div>
       <div className={classes.searchBox}>
         <input type="text" placeholder="Buscar na plataforma" />
         <FaSearch size={24} color="gray" />

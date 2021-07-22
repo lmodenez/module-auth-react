@@ -54,6 +54,7 @@ export const useStyles = makeStyles((theme) => ({
     width: '50%',
     transition: '0.2s ease-in-out all',
     marginTop: '1rem',
+    color: 'white',
     '&:hover': {
       opacity: '90%',
       transform: 'scale(1.02)',

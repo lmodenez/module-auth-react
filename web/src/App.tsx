@@ -12,10 +12,11 @@ function App() {
   let theme = createMuiTheme({
     palette: {
       primary: {
-        main: '#3F51B5',
+        main: '#e0b116',
       },
+
       background: {
-        default: '#3F51B5',
+        default: '#2B3038',
       },
     },
   });

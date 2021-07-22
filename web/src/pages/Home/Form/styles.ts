@@ -7,11 +7,11 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    marginTop: '3rem',
+    marginTop: '2rem',
   },
   boxButton: {
     display: 'flex',
-    marginTop: '2rem',
+    marginTop: '1rem',
     width: '100%',
     flexDirection: 'column',
     alignItems: 'center',
@@ -34,5 +34,12 @@ export const useStyles = makeStyles((theme) => ({
     width: '75%',
     height: 'auto',
     marginTop: '0.5rem',
+    color: 'black',
+  },
+
+  inputLabel: {
+    '&:valid + fieldset': {
+      borderColor: '#e0b116',
+    },
   },
 }));

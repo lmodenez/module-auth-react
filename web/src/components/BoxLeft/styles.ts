@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => ({
   content: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#2884C1',
+    backgroundColor: '#262A30',
     width: '400px',
     height: '650px',
     borderRadius: '20px 0 0 20px',

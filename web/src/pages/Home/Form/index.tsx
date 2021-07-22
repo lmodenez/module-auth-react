@@ -34,7 +34,12 @@ export function Form() {
             onChange={onChange}
             error={!!error}
             helperText={error ? error.message : null}
+            color="primary"
             className={classes.input}
+            InputProps={{
+              style: { color: 'black' },
+            }}
+            InputLabelProps={{ className: classes.inputLabel }}
           />
         )}
         rules={{
@@ -56,6 +61,7 @@ export function Form() {
             onChange={onChange}
             error={!!error}
             helperText={error ? error.message : null}
+            color="primary"
             className={classes.input}
           />
         )}
@@ -73,7 +79,7 @@ export function Form() {
           type="submit"
           variant="contained"
           className={classes.buttonStyle}
-          style={{ backgroundColor: '#36BD20' }}
+          style={{ backgroundColor: '#0047B3' }}
         >
           Entrar
         </Button>
@@ -81,7 +87,7 @@ export function Form() {
           type="button"
           variant="contained"
           className={classes.buttonStyle}
-          style={{ backgroundColor: '#2E76CF' }}
+          style={{ backgroundColor: '#e0b116' }}
           onClick={() => {
             history.push('/cadastro');
           }}
@@ -93,7 +99,7 @@ export function Form() {
           type="button"
           variant="contained"
           className={classes.buttonStyle}
-          style={{ backgroundColor: '#cf2e2e' }}
+          style={{ backgroundColor: '#c84118' }}
           onClick={() => history.push('/recuperarsenha')}
         >
           Recuperar senha

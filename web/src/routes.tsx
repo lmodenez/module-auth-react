@@ -3,9 +3,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Register from './pages/Register';
-import ForgotPassword from './pages/ForgotPassword';
-import ResetPassword from './pages/ResetPassword';
-import ConfirmRegister from './pages/ConfirmRegister';
+import ForgotPassword from './pages/Forgot';
+import ResetPassword from './pages/Reset';
+import ConfirmRegister from './pages/Confirm';
 import Tickets from './pages/Tickets';
 
 function Routes() {
