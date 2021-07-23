@@ -1,12 +1,12 @@
 import { useStyles } from './styles';
 
-import { TiTicket } from 'react-icons/ti';
 import {
   RiGroupLine,
   RiUserSettingsLine,
   RiSettings5Line,
 } from 'react-icons/ri';
-import { FaUsersCog } from 'react-icons/fa';
+
+import { TiTicket } from 'react-icons/ti';
 import { AiOutlineUsergroupAdd } from 'react-icons/ai';
 
 function Sidebar() {
@@ -19,34 +19,22 @@ function Sidebar() {
         <div className={classes.groupItem}>
           <TiTicket size={24} />
           <div className={classes.menuItem}>
-            <a href="/">Chamados</a>
+            <a href="/aluno">Disciplinas</a>
           </div>
         </div>
         <div className={classes.groupItem}>
-          <RiUserSettingsLine size={24} />
+          <TiTicket size={24} />
           <div className={classes.menuItem}>
-            <a href="/">Meu perfil</a>
+            <a href="/aluno">Dúvidas</a>
           </div>
         </div>
       </div>
       <div className={classes.boxConfig}>
         <span>Painel de Controle</span>
         <div className={classes.groupItem}>
-          <RiSettings5Line size={24} />
+          <RiUserSettingsLine size={24} />
           <div className={classes.menuItem}>
-            <a href="/">Suporte</a>
-          </div>
-        </div>
-        <div className={classes.groupItem}>
-          <RiGroupLine size={24} />
-          <div className={classes.menuItem}>
-            <a href="/">Usuários</a>
-          </div>
-        </div>
-        <div className={classes.groupItem}>
-          <AiOutlineUsergroupAdd size={24} />
-          <div className={classes.menuItem}>
-            <a href="/">Grupo de Acesso</a>
+            <a href="/aluno">Meu perfil</a>
           </div>
         </div>
       </div>

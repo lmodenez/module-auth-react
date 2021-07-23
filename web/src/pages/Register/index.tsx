@@ -3,7 +3,7 @@ import { Grid, Box, Typography, Slide } from '@material-ui/core';
 import { useStyles } from './styles';
 
 import BoxLeft from '../../components/BoxLeft';
-import Form from './Form';
+import Form from '../../components/FormRegister';
 
 function Register() {
   const classes = useStyles();

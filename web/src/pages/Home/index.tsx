@@ -3,7 +3,7 @@ import { Grid, Typography, Slide } from '@material-ui/core';
 import { useStyles } from './styles';
 
 import BoxLeft from '../../components/BoxLeft';
-import Form from './Form';
+import Form from '../../components/FormLogin';
 
 function Home() {
   const classes = useStyles();
@@ -22,7 +22,7 @@ function Home() {
       >
         <Grid className={classes.content}>
           <Typography variant="h3" className={classes.text}>
-            Realize seu login
+            Área do aluno
           </Typography>
           {/* Component Form */}
           <Form />

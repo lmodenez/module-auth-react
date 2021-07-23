@@ -138,7 +138,7 @@ const handleWarnForCheckButton = () => {
   toast.warn(
     <div>
       {' '}
-      <b style={{ color: 'white' }}>Concorde com os "Termos de Serviços"!</b>
+      <b style={{ color: 'white' }}>Aceite os "Termos de Serviços"!</b>
     </div>,
     {
       position: 'top-center',

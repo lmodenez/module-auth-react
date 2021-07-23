@@ -1,3 +1,3 @@
-import imgBarber from '../../public/assets/barber-logo.png';
+import imgLogoPecege from '../../public/assets/logo-faculdade-pecege.png';
 
-export const logoBarber = imgBarber;
+export const logoPecege = imgLogoPecege;

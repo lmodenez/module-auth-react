@@ -4,12 +4,16 @@ export const useStyles = makeStyles((theme) => ({
   content: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#262A30',
+    backgroundColor: '#ecf0f1',
     width: '400px',
     height: '650px',
     borderRadius: '20px 0 0 20px',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     alignItems: 'center',
+
+    '& img': {
+      marginTop: '50%',
+    },
   },
   boxLogo: {
     display: 'flex',

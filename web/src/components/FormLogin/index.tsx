@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom';
 import { useForm, Controller } from 'react-hook-form';
 import { Box, TextField, Button } from '@material-ui/core';
 import { useStyles } from './styles';
-import { useAuth } from '../../../hooks/useAuth';
+import { useAuth } from '../../hooks/useAuth';
 
 type FormProps = {
   login: string;
@@ -17,6 +17,8 @@ export function Form() {
 
   const onSubmit = async (data: FormProps) => {
     await handleLogin(data.login, data.password);
+
+    history.push('/aluno');
   };
 
   return (
@@ -79,7 +81,7 @@ export function Form() {
           type="submit"
           variant="contained"
           className={classes.buttonStyle}
-          style={{ backgroundColor: '#0047B3' }}
+          style={{ backgroundColor: '#CA285A' }}
         >
           Entrar
         </Button>
@@ -87,7 +89,7 @@ export function Form() {
           type="button"
           variant="contained"
           className={classes.buttonStyle}
-          style={{ backgroundColor: '#e0b116' }}
+          style={{ backgroundColor: '#E9263F' }}
           onClick={() => {
             history.push('/cadastro');
           }}
@@ -99,7 +101,7 @@ export function Form() {
           type="button"
           variant="contained"
           className={classes.buttonStyle}
-          style={{ backgroundColor: '#c84118' }}
+          style={{ backgroundColor: '#900 ' }}
           onClick={() => history.push('/recuperarsenha')}
         >
           Recuperar senha

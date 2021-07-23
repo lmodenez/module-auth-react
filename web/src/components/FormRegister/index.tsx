@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useForm, Controller } from 'react-hook-form';
 import { useStyles } from './styles';
 
-import { api } from '../../../services/api';
+import { api } from '../../services/api';
 
 import {
   TextField,
@@ -20,8 +20,8 @@ import {
   handleWarnForCheckButton,
   handleRegisterSuccess,
   handleRegisterError,
-} from '../../../utils/Toast';
-import ServiceTerm from '../../../utils/Term';
+} from '../../utils/Toast';
+import ServiceTerm from '../../utils/Term';
 import { AxiosResponse } from 'axios';
 
 type FormProps = {
@@ -289,7 +289,7 @@ export function Form() {
       <Button
         variant="contained"
         className={classes.button}
-        style={{ backgroundColor: '#0047B3' }}
+        style={{ backgroundColor: '#CA285A' }}
         type="submit"
       >
         Cadastrar
@@ -298,7 +298,7 @@ export function Form() {
         variant="contained"
         className={classes.button}
         style={{
-          backgroundColor: '#c84118',
+          backgroundColor: '#E9263F',
           width: '60%',
           marginBottom: '1rem',
         }}

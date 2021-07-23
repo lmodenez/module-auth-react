@@ -6,7 +6,8 @@ import Register from './pages/Register';
 import ForgotPassword from './pages/Forgot';
 import ResetPassword from './pages/Reset';
 import ConfirmRegister from './pages/Confirm';
-import Tickets from './pages/Tickets';
+import Students from './pages/Students';
+import NewDiscipline from './pages/Students/NewDiscipline';
 
 function Routes() {
   return (
@@ -17,7 +18,8 @@ function Routes() {
         <Route path="/recuperarsenha" exact component={ForgotPassword} />
         <Route path="/resetarsenha/:token" exact component={ResetPassword} />
         <Route path="/confirm/:token" exact component={ConfirmRegister} />
-        <Route path="/chamados" exact component={Tickets} />
+        <Route path="/aluno" exact component={Students} />
+        <Route path="/aluno/novadisciplina" exact component={NewDiscipline} />
       </Switch>
     </BrowserRouter>
   );

@@ -1,10 +1,12 @@
 import { makeStyles } from '@material-ui/core';
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundColor: '#003380',
-    width: '15%',
+    backgroundColor: theme.palette.background.default,
+    width: '18%',
+    maxWidth: '18%',
     height: '100vh',
+    position: 'relative',
 
     display: 'flex',
     flexDirection: 'column',

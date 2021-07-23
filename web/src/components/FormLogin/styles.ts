@@ -39,7 +39,7 @@ export const useStyles = makeStyles((theme) => ({
 
   inputLabel: {
     '&:valid + fieldset': {
-      borderColor: '#e0b116',
+      borderColor: '#900',
     },
   },
 }));

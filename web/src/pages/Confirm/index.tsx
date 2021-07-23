@@ -51,7 +51,11 @@ export function ConfirmRegister() {
             <Button
               variant="contained"
               className={classes.button}
-              style={{ backgroundColor: '#2E76CF', width: '45%' }}
+              style={{
+                backgroundColor: '#2E76CF',
+                color: 'white',
+                width: '45%',
+              }}
               color="primary"
               type="button"
               onClick={() => history.push('/')}
