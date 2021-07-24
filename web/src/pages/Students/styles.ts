@@ -56,18 +56,12 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: '4px',
   },
   gridItemContent: {
+    display: 'block',
     marginTop: '16px',
     marginBottom: '16px',
     width: '100%',
     maxWidth: '80%',
-
-    '& span': {
-      display: 'flex',
-      width: '100%',
-      maxWidth: '80%',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap',
-    },
+    wordWrap: 'break-word',
   },
   discipline: {
     color: '#FFFFFF',

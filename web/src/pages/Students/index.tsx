@@ -13,6 +13,7 @@ import { useStyles } from './styles';
 import { api } from '../../services/api';
 
 type DisciplineProps = {
+  id: number;
   disciplina: string;
   descricao: string;
 };
@@ -20,7 +21,9 @@ type DisciplineProps = {
 export function Students() {
   const classes = useStyles();
   const history = useHistory();
+
   const { isMobile } = useSidebar();
+
   const [result, setResult] = useState<DisciplineProps[]>([]);
 
   useEffect(() => {
@@ -48,10 +51,10 @@ export function Students() {
               </Button>
             </div>
             <Grid className={classes.grid} container spacing={2}>
-              {result?.map((disciplina, key) => (
-                <Zoom in={true} timeout={1000}>
+              {result?.map((disciplina) => (
+                <Zoom in={true} timeout={500}>
                   <Grid
-                    key={key}
+                    key={disciplina.id}
                     item
                     xs={12}
                     sm={6}
