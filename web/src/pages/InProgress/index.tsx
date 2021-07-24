@@ -1,21 +1,21 @@
-import { useHistory } from 'react-router';
-
-import { Box, Button, Grid, Typography } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
+
+import { useSidebar } from '../../hooks/useSidebar';
 
 import { useStyles } from './styles';
 
 export function InProgress() {
   const classes = useStyles();
-  const history = useHistory();
+  const { isMobile } = useSidebar();
 
   return (
     <div className={classes.container}>
       <Header />
       <div className={classes.content}>
-        <Sidebar />
+        {!isMobile && <Sidebar />}
         <div className={classes.boxWrapper}>
           <div className={classes.box}>
             <Grid className={classes.grid} container spacing={2}>

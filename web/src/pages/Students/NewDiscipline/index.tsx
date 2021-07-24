@@ -19,9 +19,13 @@ type FormProps = {
 
 export function NewDiscipline() {
   const classes = useStyles();
+
   const history = useHistory();
+
   const { handleSubmit } = useForm();
+
   const { isMobile } = useSidebar();
+
   const disciplina = useRef({} as any);
   const descricao = useRef({} as any);
   const formRef = useRef({} as any);

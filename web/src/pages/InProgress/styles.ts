@@ -43,5 +43,22 @@ export const useStyles = makeStyles((theme) => ({
       display: 'flex',
       justifyContent: 'center',
     },
+
+    [theme.breakpoints.down('xs')]: {
+      width: '80%',
+      height: '50vh',
+
+      '& span': {
+        fontSize: '16px',
+      },
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+      height: '50vh',
+
+      '& span': {
+        fontSize: '16px',
+      },
+    },
   },
 }));

@@ -21,9 +21,7 @@ function Sidebar() {
         <Link to="/aluno">
           <div className={classes.groupItem}>
             <TiTicket size={24} />
-            <div className={classes.menuItem}>
-              <a href="/aluno">Disciplinas</a>
-            </div>
+            <div className={classes.menuItem}>Disciplinas</div>
           </div>
         </Link>
         <Link to="/ops">

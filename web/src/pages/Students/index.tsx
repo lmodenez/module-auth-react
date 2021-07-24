@@ -53,14 +53,9 @@ export function Students() {
             <Grid className={classes.grid} container spacing={2}>
               {result?.map((disciplina) => (
                 <Zoom in={true} timeout={500}>
-                  <Grid
-                    key={disciplina.id}
-                    item
-                    xs={12}
-                    sm={6}
-                    className={classes.gridItem}
-                  >
+                  <Grid item xs={12} sm={6} className={classes.gridItem}>
                     <Box
+                      key={disciplina.id}
                       className={classes.discipline}
                       style={{ backgroundColor: '#990000' }}
                     >
