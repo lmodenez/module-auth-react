@@ -22,7 +22,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
           usuario: login,
           senha: password,
         })
-        .then((res) => console.log(res.data))
+        .then((res) => {
+          console.log(res.data);
+        })
         .catch(() => handleSingInError());
     } catch (err) {
       console.log(err);

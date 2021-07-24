@@ -5,6 +5,7 @@ import {
 } from '@material-ui/core';
 
 import { AuthProvider } from './contexts/AuthContext';
+import { SidebarProvider } from './contexts/SidebarContext';
 
 import Routes from './routes';
 
@@ -26,7 +27,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <AuthProvider>
-        <Routes />
+        <SidebarProvider>
+          <Routes />
+        </SidebarProvider>
       </AuthProvider>
     </ThemeProvider>
   );

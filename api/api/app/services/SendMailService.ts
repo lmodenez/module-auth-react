@@ -23,20 +23,22 @@ class SendMailService {
 
     const html = mailTemplateParse(variables);
 
+    let testAccount = await nodemailer.createTestAccount();
+
     try {
       let transporter = nodemailer.createTransport({
         host: process.env.MAIL_HOST,
         port: Number(process.env.MAIL_PORT),
-        secure: true, // true for 465, false for other ports
+        secure: false, // true for 465, false for other ports
         auth: {
-          user: process.env.MAIL_USER,
-          pass: process.env.MAIL_PASSWORD,
+          user: testAccount.user,
+          pass: testAccount.pass,
         },
       });
 
       if (sendType != 'confirm') {
         let info = await transporter.sendMail({
-          from: '"Portal Starplast" no-reply@starplast.com.br', // sender address
+          from: '"Faculdade Pecege" no-reply@pecege.com.br', // sender address
           to: email, // list of receivers
           subject: 'Solicitação de recuperação de senha! 🔐', // Subject line
           html,

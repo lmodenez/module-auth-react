@@ -22,7 +22,7 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     width: '100%',
     maxWidth: '740px',
-    // alignItems: 'flex-end',
+    alignItems: 'center',
     marginTop: '32px',
   },
   grid: {
@@ -35,6 +35,13 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: 'left',
     marginTop: '24px',
     padding: '24px',
+
+    [theme.breakpoints.down('xs')]: {
+      width: '80%',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
   },
   span: {
     color: 'black',
@@ -54,7 +61,26 @@ export const useStyles = makeStyles((theme) => ({
 
   button: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     marginTop: '16px',
+
+    [theme.breakpoints.down('xs')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+
+      '& button:nth-child(2)': {
+        marginTop: '16px',
+      },
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+
+      '& button:nth-child(2)': {
+        marginTop: '16px',
+      },
+    },
   },
 }));

@@ -81,7 +81,7 @@ export function ResetPassword() {
               <Button
                 variant="contained"
                 className={classes.button}
-                style={{ backgroundColor: '#64991e' }}
+                style={{ backgroundColor: '#CA285A' }}
                 color="primary"
                 type="submit"
               >
@@ -90,7 +90,7 @@ export function ResetPassword() {
               <Button
                 variant="contained"
                 className={classes.button}
-                style={{ backgroundColor: '#2E76CF', width: '45%' }}
+                style={{ backgroundColor: '#E9263F', width: '45%' }}
                 color="primary"
                 type="button"
                 onClick={() => history.push('/')}

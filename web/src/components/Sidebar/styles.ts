@@ -35,8 +35,18 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-
+    width: '100%',
+    height: '32px',
+    marginLeft: '16px',
     marginTop: '15%',
+
+    transition: '0.3s ease all',
+
+    '&:hover': {
+      transform: 'scale(1.15)',
+      backgroundColor: '#ff0d0d',
+      borderRadius: '10px',
+    },
   },
   menuItem: {
     marginLeft: '16px',

@@ -8,6 +8,7 @@ import ResetPassword from './pages/Reset';
 import ConfirmRegister from './pages/Confirm';
 import Students from './pages/Students';
 import NewDiscipline from './pages/Students/NewDiscipline';
+import InProgress from './pages/InProgress';
 
 function Routes() {
   return (
@@ -20,6 +21,7 @@ function Routes() {
         <Route path="/confirm/:token" exact component={ConfirmRegister} />
         <Route path="/aluno" exact component={Students} />
         <Route path="/aluno/novadisciplina" exact component={NewDiscipline} />
+        <Route path="/ops" exact component={InProgress} />
       </Switch>
     </BrowserRouter>
   );

@@ -31,6 +31,7 @@ module.exports = {
     isDevelopment && new ReactRefreshWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html'),
+      favicon: path.resolve(__dirname, 'public', 'assets', 'favicon.ico'),
     }),
   ].filter(Boolean),
   module: {

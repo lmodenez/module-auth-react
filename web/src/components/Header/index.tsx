@@ -1,3 +1,5 @@
+import { Hidden } from '@material-ui/core';
+
 import Logo from './Logo';
 import Profile from './Profile';
 import Search from './Search';
@@ -12,7 +14,9 @@ function Header() {
       <div className={classes.content}>
         <Logo />
         <div className={classes.search}>
-          <Search />
+          <Hidden only={['sm', 'xs']}>
+            <Search />
+          </Hidden>
           <Profile />
         </div>
       </div>

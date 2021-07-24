@@ -52,7 +52,7 @@ export function ConfirmRegister() {
               variant="contained"
               className={classes.button}
               style={{
-                backgroundColor: '#2E76CF',
+                backgroundColor: '#990000',
                 color: 'white',
                 width: '45%',
               }}

@@ -10,12 +10,15 @@ import {
   MenuList,
   Grow,
   Popper,
+  Hidden,
 } from '@material-ui/core';
 
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import Cached from '@material-ui/icons/Cached';
 
 import { useStyles } from './styles';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 function Profile() {
   const classes = useStyles();
@@ -39,10 +42,20 @@ function Profile() {
 
   return (
     <div className={classes.container}>
-      <Cached
-        onClick={() => window.location.reload()}
-        style={{ cursor: 'pointer' }}
-      />
+      <Hidden only={['sm', 'xs']}>
+        <Cached
+          onClick={() => window.location.reload()}
+          style={{ cursor: 'pointer' }}
+        />
+      </Hidden>
+      <Hidden only={['xl', 'lg']}>
+        <AiOutlineMenu
+          size={32}
+          color="white"
+          style={{ cursor: 'pointer' }}
+          onClick={() => console.log('menu')}
+        />
+      </Hidden>
       <Badge badgeContent={412} color="secondary">
         <NotificationsActiveIcon />
       </Badge>
@@ -75,10 +88,12 @@ function Profile() {
             <Paper elevation={3}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList autoFocusItem={open} id="menu-list-grow">
-                  <MenuItem onClick={handleClose}>Perfil</MenuItem>
-                  <MenuItem onClick={handleClose}>
-                    <a href="/">Sair</a>
-                  </MenuItem>
+                  <Link to="/ops">
+                    <MenuItem onClick={handleClose}>Perfil</MenuItem>
+                  </Link>
+                  <Link to="/">
+                    <MenuItem onClick={handleClose}>Sair</MenuItem>
+                  </Link>
                 </MenuList>
               </ClickAwayListener>
             </Paper>
