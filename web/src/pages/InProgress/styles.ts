@@ -9,13 +9,16 @@ export const useStyles = makeStyles((theme) => ({
   content: {
     display: 'flex',
     flexDirection: 'row',
-    width: '100%',
+
+    width: 'auto',
+    height: 'calc(100vh - 80px)',
   },
   boxWrapper: {
     display: 'flex',
     justifyContent: 'center',
     width: '100%',
     position: 'relative',
+    height: 'calc(100vh - 80px)',
   },
   box: {
     display: 'flex',
@@ -39,14 +42,13 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: '36px',
       fontWeight: 'bold',
       alignItems: 'center',
-      width: '100%',
       display: 'flex',
       justifyContent: 'center',
+      wordWrap: 'break-word',
     },
 
     [theme.breakpoints.down('xs')]: {
       width: '80%',
-      height: '50vh',
 
       '& span': {
         fontSize: '16px',
@@ -54,11 +56,31 @@ export const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('sm')]: {
       width: '80%',
-      height: '50vh',
 
       '& span': {
         fontSize: '16px',
       },
     },
+  },
+
+  hide: {
+    display: 'none',
+  },
+
+  main: {
+    flexGrow: 1,
+    marginLeft: '-15rem',
+    padding: theme.spacing(3),
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  mainShift: {
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
   },
 }));

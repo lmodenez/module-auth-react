@@ -17,8 +17,6 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import Cached from '@material-ui/icons/Cached';
 
 import { useStyles } from './styles';
-import { AiOutlineMenu } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
 
 function Profile() {
   const classes = useStyles();
@@ -45,25 +43,18 @@ function Profile() {
       <Hidden only={['sm', 'xs']}>
         <Cached
           onClick={() => window.location.reload()}
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: 'pointer', color: '#FFFFFF', marginRight: '1rem' }}
         />
       </Hidden>
-      <Hidden only={['xl', 'lg']}>
-        <AiOutlineMenu
-          size={32}
-          color="white"
-          style={{ cursor: 'pointer' }}
-          onClick={() => console.log('menu')}
-        />
-      </Hidden>
-      <Badge badgeContent={412} color="secondary">
-        <NotificationsActiveIcon />
+
+      <Badge badgeContent={412} color="secondary" style={{ margin: '0 1rem' }}>
+        <NotificationsActiveIcon style={{ color: '#FFFFFF' }} />
       </Badge>
       <Button ref={anchorRef} onClick={handleToggle}>
         <Avatar
           style={{
-            color: 'white',
-            backgroundColor: '#CA285A',
+            color: '#ff0d0d',
+            backgroundColor: '#FFFFFF',
             cursor: 'pointer',
           }}
         >
@@ -88,12 +79,10 @@ function Profile() {
             <Paper elevation={3}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList autoFocusItem={open} id="menu-list-grow">
-                  <Link to="/ops">
-                    <MenuItem onClick={handleClose}>Perfil</MenuItem>
-                  </Link>
-                  <Link to="/">
-                    <MenuItem onClick={handleClose}>Sair</MenuItem>
-                  </Link>
+                  <MenuItem onClick={handleClose}>Perfil</MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <a href="/">Sair</a>
+                  </MenuItem>
                 </MenuList>
               </ClickAwayListener>
             </Paper>

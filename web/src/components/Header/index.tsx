@@ -13,10 +13,10 @@ function Header() {
     <div className={classes.container}>
       <div className={classes.content}>
         <Logo />
-        <div className={classes.search}>
-          <Hidden only={['sm', 'xs']}>
-            <Search />
-          </Hidden>
+        <Hidden only={['sm', 'xs']}>
+          <Search />
+        </Hidden>
+        <div className={classes.profile}>
           <Profile />
         </div>
       </div>

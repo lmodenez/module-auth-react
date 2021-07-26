@@ -9,7 +9,9 @@ export const useStyles = makeStyles((theme) => ({
   content: {
     display: 'flex',
     flexDirection: 'row',
-    width: '100%',
+
+    width: 'auto',
+    height: 'calc(100vh - 80px)',
   },
   boxWrapper: {
     display: 'flex',
@@ -21,7 +23,7 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
-    maxWidth: '740px',
+    maxWidth: '1480px',
     alignItems: 'center',
     marginTop: '32px',
   },
@@ -82,5 +84,26 @@ export const useStyles = makeStyles((theme) => ({
         marginTop: '16px',
       },
     },
+  },
+
+  hide: {
+    display: 'none',
+  },
+
+  main: {
+    flexGrow: 1,
+    marginLeft: '-15rem',
+    padding: theme.spacing(3),
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  mainShift: {
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
   },
 }));

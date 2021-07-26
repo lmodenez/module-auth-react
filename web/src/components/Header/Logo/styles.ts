@@ -4,6 +4,12 @@ export const useStyles = makeStyles(() => ({
   container: {
     display: 'flex',
     justifyContent: 'center',
-    width: '350px',
+    width: '15rem',
+    marginLeft: '1rem',
+    alignItems: 'center',
+
+    '& svg, img': {
+      marginLeft: '1rem',
+    },
   },
 }));

@@ -6,9 +6,11 @@ export const useStyles = makeStyles(() => ({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
-    width: '500px',
+    width: '25%',
+    height: '50%',
     border: '0',
     borderRadius: '20px',
+    marginLeft: '2rem',
 
     '& svg': {
       marginRight: '16px',
@@ -25,6 +27,7 @@ export const useStyles = makeStyles(() => ({
 
       '&::placeholder': {
         marginLeft: '24px',
+        fontWeight: 'bold',
         color: '#a7a7a7',
       },
     },

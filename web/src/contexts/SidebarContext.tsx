@@ -12,12 +12,16 @@ type SidebarProviderProps = {
 
 type SidebarProps = {
   isMobile: boolean;
+  isMenuOpen: boolean;
+  handleMenuOpen: () => void;
+  handleMenuClose: () => void;
 };
 
 export const SidebarContext = createContext({} as SidebarProps);
 
 export function SidebarProvider({ children }: SidebarProviderProps) {
   const [isMobile, setIsMobile] = useState(false);
+
   const size = useWindowSize();
 
   useEffect(() => {
@@ -28,8 +32,20 @@ export function SidebarProvider({ children }: SidebarProviderProps) {
     }
   }, [size]);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function handleMenuOpen() {
+    setIsMenuOpen(false);
+  }
+
+  function handleMenuClose() {
+    setIsMenuOpen(true);
+  }
+
   return (
-    <SidebarContext.Provider value={{ isMobile }}>
+    <SidebarContext.Provider
+      value={{ isMobile, isMenuOpen, handleMenuOpen, handleMenuClose }}
+    >
       {children}
     </SidebarContext.Provider>
   );

@@ -23,11 +23,7 @@ export const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
 
-  search: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    height: 'auto',
-    width: '100%',
+  profile: {
+    marginLeft: 'auto',
   },
 }));

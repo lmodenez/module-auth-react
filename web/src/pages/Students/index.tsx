@@ -12,6 +12,8 @@ import { useStyles } from './styles';
 
 import { api } from '../../services/api';
 
+import clsx from 'clsx';
+
 type DisciplineProps = {
   id: number;
   disciplina: string;
@@ -21,6 +23,7 @@ type DisciplineProps = {
 export function Students() {
   const classes = useStyles();
   const history = useHistory();
+  const { isMenuOpen } = useSidebar();
 
   const { isMobile } = useSidebar();
 
@@ -34,46 +37,52 @@ export function Students() {
     <div className={classes.container}>
       <Header />
       <div className={classes.content}>
-        {!isMobile && <Sidebar />}
-        <div className={classes.boxWrapper}>
-          <div className={classes.box}>
-            <div className={classes.mobileBox}>
-              <Button
-                type="button"
-                style={{
-                  backgroundColor: '#990000',
-                  color: '#FFFFFF',
-                  width: '200px',
-                }}
-                onClick={() => history.push('/aluno/novadisciplina')}
-              >
-                Nova disciplina
-              </Button>
+        <Sidebar />
+        <main
+          className={clsx(classes.main, {
+            [classes.mainShift]: isMenuOpen,
+          })}
+        >
+          <div className={classes.boxWrapper}>
+            <div className={classes.box}>
+              <div className={classes.mobileBox}>
+                <Button
+                  type="button"
+                  style={{
+                    backgroundColor: '#990000',
+                    color: '#FFFFFF',
+                    width: '200px',
+                  }}
+                  onClick={() => history.push('/aluno/novadisciplina')}
+                >
+                  Nova disciplina
+                </Button>
+              </div>
+              <Grid className={classes.grid} container spacing={2}>
+                {result?.map((disciplina) => (
+                  <Zoom in={true} timeout={500}>
+                    <Grid item xs={12} sm={6} className={classes.gridItem}>
+                      <Box
+                        key={disciplina.id}
+                        className={classes.discipline}
+                        style={{ backgroundColor: '#990000' }}
+                      >
+                        <div className={classes.gridItemTitle}>
+                          <Typography variant="h6">
+                            {disciplina.disciplina}
+                          </Typography>
+                        </div>
+                        <div className={classes.gridItemContent}>
+                          <span>{disciplina.descricao}</span>
+                        </div>
+                      </Box>
+                    </Grid>
+                  </Zoom>
+                ))}
+              </Grid>
             </div>
-            <Grid className={classes.grid} container spacing={2}>
-              {result?.map((disciplina) => (
-                <Zoom in={true} timeout={500}>
-                  <Grid item xs={12} sm={6} className={classes.gridItem}>
-                    <Box
-                      key={disciplina.id}
-                      className={classes.discipline}
-                      style={{ backgroundColor: '#990000' }}
-                    >
-                      <div className={classes.gridItemTitle}>
-                        <Typography variant="h6">
-                          {disciplina.disciplina}
-                        </Typography>
-                      </div>
-                      <div className={classes.gridItemContent}>
-                        <span>{disciplina.descricao}</span>
-                      </div>
-                    </Box>
-                  </Grid>
-                </Zoom>
-              ))}
-            </Grid>
           </div>
-        </div>
+        </main>
       </div>
     </div>
   );

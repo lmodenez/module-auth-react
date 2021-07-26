@@ -11,6 +11,7 @@ import { useHistory } from 'react-router';
 import { useSidebar } from '../../../hooks/useSidebar';
 
 import { api } from '../../../services/api';
+import clsx from 'clsx';
 
 type FormProps = {
   disciplina: string;
@@ -24,7 +25,7 @@ export function NewDiscipline() {
 
   const { handleSubmit } = useForm();
 
-  const { isMobile } = useSidebar();
+  const { isMenuOpen } = useSidebar();
 
   const disciplina = useRef({} as any);
   const descricao = useRef({} as any);
@@ -45,59 +46,65 @@ export function NewDiscipline() {
     <div className={classes.container}>
       <Header />
       <div className={classes.content}>
-        {!isMobile && <Sidebar />}
-        <div className={classes.boxWrapper}>
-          <div className={classes.box}>
-            <Grow in={true} timeout={1000}>
-              <Grid className={classes.grid}>
-                <div className={classes.span}>
-                  <span>Nova disciplina</span>
-                </div>
-                <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
-                  <Box className={classes.input}>
-                    <TextField
-                      variant="outlined"
-                      placeholder="Nome da disciplina"
-                      inputRef={disciplina}
-                      color="primary"
-                    />
-                    <br />
-                    <TextField
-                      variant="outlined"
-                      placeholder="Descrição da disciplina"
-                      multiline
-                      rows={5}
-                      inputRef={descricao}
-                    />
-                  </Box>
-                  <div className={classes.button}>
-                    <Button
-                      type="submit"
-                      style={{
-                        backgroundColor: '#990000',
-                        color: '#FFFFFF',
-                        width: '200px',
-                      }}
-                    >
-                      Criar
-                    </Button>
-                    <Button
-                      type="button"
-                      style={{
-                        backgroundColor: '#CA285A',
-                        color: '#FFFFFF',
-                        width: '200px',
-                      }}
-                      onClick={() => history.push('/aluno')}
-                    >
-                      Voltar
-                    </Button>
+        <Sidebar />
+        <main
+          className={clsx(classes.main, {
+            [classes.mainShift]: isMenuOpen,
+          })}
+        >
+          <div className={classes.boxWrapper}>
+            <div className={classes.box}>
+              <Grow in={true} timeout={1000}>
+                <Grid className={classes.grid}>
+                  <div className={classes.span}>
+                    <span>Nova disciplina</span>
                   </div>
-                </form>
-              </Grid>
-            </Grow>
+                  <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
+                    <Box className={classes.input}>
+                      <TextField
+                        variant="outlined"
+                        placeholder="Nome da disciplina"
+                        inputRef={disciplina}
+                        color="primary"
+                      />
+                      <br />
+                      <TextField
+                        variant="outlined"
+                        placeholder="Descrição da disciplina"
+                        multiline
+                        rows={5}
+                        inputRef={descricao}
+                      />
+                    </Box>
+                    <div className={classes.button}>
+                      <Button
+                        type="submit"
+                        style={{
+                          backgroundColor: '#990000',
+                          color: '#FFFFFF',
+                          width: '200px',
+                        }}
+                      >
+                        Criar
+                      </Button>
+                      <Button
+                        type="button"
+                        style={{
+                          backgroundColor: '#CA285A',
+                          color: '#FFFFFF',
+                          width: '200px',
+                        }}
+                        onClick={() => history.push('/aluno')}
+                      >
+                        Voltar
+                      </Button>
+                    </div>
+                  </form>
+                </Grid>
+              </Grow>
+            </div>
           </div>
-        </div>
+        </main>
       </div>
     </div>
   );

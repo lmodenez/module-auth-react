@@ -4,12 +4,13 @@ export const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: '#ecf0f1',
     width: '100%',
-    height: '100%',
   },
   content: {
     display: 'flex',
     flexDirection: 'row',
-    width: '100%',
+
+    margin: '0 auto',
+    height: 'calc(100vh - 80px)',
   },
   boxWrapper: {
     display: 'flex',
@@ -93,5 +94,26 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       justifyContent: 'space-around',
     },
+  },
+
+  hide: {
+    display: 'none',
+  },
+
+  main: {
+    flexGrow: 1,
+    marginLeft: '-15rem',
+    padding: theme.spacing(3),
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  mainShift: {
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
   },
 }));

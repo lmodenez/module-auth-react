@@ -1,27 +1,14 @@
 import { makeStyles } from '@material-ui/core';
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles(() => ({
   container: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
+    marginRight: '2rem',
+    margin: 'auto',
 
-    width: '200px',
-
-    [theme.breakpoints.down('sm')]: {
-      justifyContent: 'center',
-
-      '& span': {
-        marginLeft: '24px',
-      },
-    },
-    [theme.breakpoints.down('xs')]: {
-      justifyContent: 'center',
-
-      '& span': {
-        marginLeft: '24px',
-      },
-    },
+    width: 'auto',
   },
 }));
