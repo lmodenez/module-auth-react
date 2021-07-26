@@ -11,10 +11,7 @@ class DisciplineController {
     try {
       if (discipline.disciplina != null && discipline.descricao != null) {
         const findDiscipline = await disciplineRepository.findOne({
-          where: [
-            { disciplina: discipline.disciplina },
-            { descricao: discipline.descricao },
-          ],
+          where: [{ disciplina: discipline.disciplina }],
         });
 
         if (findDiscipline) return response.sendStatus(409);

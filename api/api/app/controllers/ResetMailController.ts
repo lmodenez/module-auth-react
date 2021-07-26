@@ -68,7 +68,7 @@ class ResetMailController {
 
       if (user) {
         var salt = bcrypt.genSaltSync(10);
-        const novaSenhaWithHash = await bcrypt.hashSync(novaSenha, salt);
+        const novaSenhaWithHash = bcrypt.hashSync(novaSenha, salt);
         await userRepository.update(
           { id: user[0].id },
           { senha: novaSenhaWithHash }
