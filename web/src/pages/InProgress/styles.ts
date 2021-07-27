@@ -35,6 +35,7 @@ export const useStyles = makeStyles((theme) => ({
     borderRadius: '10px',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     marginTop: '24px',
 
     '& span': {

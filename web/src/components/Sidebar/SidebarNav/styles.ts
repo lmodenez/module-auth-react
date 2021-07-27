@@ -37,7 +37,7 @@ export const useStyles = makeStyles(() => ({
 
     marginTop: '15%',
 
-    '& a': {
+    '& p': {
       marginLeft: '1rem',
     },
 

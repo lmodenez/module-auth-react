@@ -17,6 +17,7 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import Cached from '@material-ui/icons/Cached';
 
 import { useStyles } from './styles';
+import { Link } from 'react-router-dom';
 
 function Profile() {
   const classes = useStyles();
@@ -79,10 +80,12 @@ function Profile() {
             <Paper elevation={3}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList autoFocusItem={open} id="menu-list-grow">
-                  <MenuItem onClick={handleClose}>Perfil</MenuItem>
-                  <MenuItem onClick={handleClose}>
-                    <a href="/">Sair</a>
-                  </MenuItem>
+                  <Link to="/ops">
+                    <MenuItem onClick={handleClose}>Perfil</MenuItem>
+                  </Link>
+                  <Link to="/">
+                    <MenuItem onClick={handleClose}>Sair</MenuItem>
+                  </Link>
                 </MenuList>
               </ClickAwayListener>
             </Paper>

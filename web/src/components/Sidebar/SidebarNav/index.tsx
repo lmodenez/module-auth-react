@@ -17,13 +17,13 @@ function SidebarNav() {
         <Link to="/aluno">
           <div className={classes.groupItem}>
             <TiTicket size={24} />
-            Disciplinas
+            <p>Disciplinas</p>
           </div>
         </Link>
         <Link to="/ops">
           <div className={classes.groupItem}>
             <AiOutlineQuestionCircle size={24} />
-            Dúvidas
+            <p>Dúvidas</p>
           </div>
         </Link>
       </div>
@@ -32,7 +32,7 @@ function SidebarNav() {
         <Link to="/ops">
           <div className={classes.groupItem}>
             <RiUserSettingsLine size={24} />
-            Meu perfil
+            <p>Meu perfil</p>
           </div>
         </Link>
       </div>
